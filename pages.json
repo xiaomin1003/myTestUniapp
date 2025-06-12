@@ -1,0 +1,186 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus" : {  
+					"titleNView" : {  
+						"titleText" : "",  
+						"tags" : [  
+							{  
+								"tag" : "img",  
+								"src" : "/static/navBackground.jpg",  
+								"position" : {  
+									"left" : "auto",  
+									"top" : "auto",  
+									"width" : "110px",  
+									"height" : "26px"  
+								}  
+							}  
+						]  
+					}  
+				}
+			}
+		},
+		{
+			"path" : "pages/secondIndex/secondIndex",
+			"style" : 
+			{
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"pullToRefresh": { //仅APP生效
+						"support": true,
+						"color": "#ff3333",
+						"style": "default",
+						"contentdown": {
+							"caption": "下拉可刷新自定义文本"
+						},
+						"contentover": {
+							"caption": "释放可刷新自定义文本"
+						},
+						"contentrefresh": {
+							"caption": "正在刷新自定义文本"
+						}
+					},
+					"titleNView": {
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"text": "分享" ,//原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+								"fontSize": "2vw",
+								"type": "share"
+							}
+						],
+						"autoBackButton": true,
+						"backButton": { //自定义 backButton
+							"background": "#00FF00"
+						}
+					}
+				}
+			}
+		},
+		{
+			"path" : "pages/rightWindow/rightWindow",
+			"style" : 
+			{
+				"navigationBarTitleText" : "rightWindow"
+			}
+		},
+		{
+			"path" : "pages/topWindow/topWindow",
+			"style" : 
+			{
+				"navigationBarTitleText" : "topWindow"
+			}
+		},
+		{
+			"path" : "pages/index/component/pageA/pageA",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/secondIndex/component/pageA/pageA",
+			"style" : 
+			{
+				// "navigationBarTitleText" : "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 450
+			}
+		},
+		{
+			"path" : "pages/secondIndex/component/pageB/pageB",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/index/component/pageB/pageB",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/index/component/pageC/pageC",
+			"style" : 
+			{
+				"navigationBarTitleText" : "打开外部程序演示"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "我的测试项目",
+		"navigationBarBackgroundColor": "#55aaff",
+		// #ifdef APP-PLUS || H5
+		// "navigationStyle": "custom",
+		// "titleImage": "/static/logo.png",
+		// #endif 
+		"backgroundColor": "#F8F8F8"
+	},
+	"topWindow": {
+	    "path": "pages/topWindow/topWindow", // 指定 topWindow 页面文件
+	    "style": {
+		  "height": "calc(10vh)"
+	    },
+	    "matchMedia": {
+	      "minWidth": 960 //生效条件，当窗口宽度大于960px时显示
+	    }
+	},
+	"rightWindow": {
+	    "path": "pages/rightWindow/rightWindow", // 指定 rightWindow 页面文件
+	    "style": {
+	      "width": "calc(20vw)" // 页面宽度
+	    },
+	    "matchMedia": {
+	      "minWidth": 960 //生效条件，当窗口宽度大于960px时显示
+	    }
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"height": "50px",
+		"fontSize": "10px",
+		"iconWidth": "24px",
+		"spacing": "3px",
+		// "iconfontSrc":"static/iconfont.ttf", // app tabbar 字体.ttf文件路径 app 3.4.4+
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"$tabBarIndex": 0,
+				// "iconPath": "static/image/icon_component.png",
+				// "selectedIconPath": "static/image/icon_component_HL.png",
+				"text": "首页"
+				// "iconfont": { // 优先级高于 iconPath，该属性依赖 tabbar 根节点的 iconfontSrc
+				// 	"text": "\ue102",
+				// 	"selectedText": "\ue103",
+				// 	"fontSize": "17px",
+				// 	"color": "#000000",
+				// 	"selectedColor": "#0000ff"
+				// }
+			}, 
+			{
+				"pagePath": "pages/secondIndex/secondIndex",
+				"$tabBarIndex": 1,
+				// "iconPath": "static/image/icon_API.png",
+				// "selectedIconPath": "static/image/icon_API_HL.png",
+				"text": "功能"
+			}
+		],
+		"midButton": {
+			"width": "80px",
+			"height": "60px",
+			"text": "文字",
+			"iconPath": "/static/logo.png",
+			"iconWidth": "28px"
+			// "backgroundImage": "static/image/midButton_backgroundImage.png"
+		}
+	}
+}

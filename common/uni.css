@@ -1,0 +1,31 @@
+.uni-link{
+	color:#576B95;
+	font-size:26rpx;
+}
+.uni-center{
+	text-align:center;
+}
+.uni-common-mt{
+	margin:30rpx 0 30rpx 0;
+}
+
+.uni-input-item {
+	border: 1px solid #66ccff;
+	padding: 0 4vw 0 4vw;
+}
+
+.uni-input {
+	color: #576B95;
+}
+
+.uni-list{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	background: #576B95;
+}
+
+.uni-list-cell {
+	flex: 1;
+	border: 1px solid red;
+}
